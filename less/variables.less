@@ -1,0 +1,107 @@
+@theme-color: #4F8DB3; //Blue Color Scheme
+//@theme-color: #7f8c8d; //Grey Color Scheme
+//@theme-color: #e74c3c; //Red Color Scheme
+//@theme-color: #16a085; //Green Color Scheme
+//@theme-color: #e67e22; //Orange Color Scheme
+
+// Font color
+@font-color: #535b60;
+
+// Headings color
+@heading-color: #53555c;
+
+// Page background
+// -------------------------
+@body-background: ~"url(../img/page-background.png)";
+
+// Typography
+// -------------------------
+@sansFontFamily: 'Open Sans', sans-serif;
+
+
+@box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+@transition: 0.8s ease all;
+.scale(@m){
+	-webkit-transform: scale(@m);
+  -moz-transform: scale(@m);
+  -ms-transform: scale(@m);
+  transform: scale(@m);
+}
+.transition(@n){
+	 -webkit-transition: @n ease all;
+    -moz-transition: @n ease all;
+    -o-transition: @n ease all; 
+    transition: @n ease all;
+}
+.translate(@x, @y){
+  -webkit-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+.transform_rotate(@deg){
+  -moz-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  -webkit-transform: rotate(@deg); 
+  -o-transform: rotate(@deg); 
+  transform: rotate(@deg);
+}
+.filter(@px){
+  -webkit-backdrop-filter: blur(@px);
+  -moz-backdrop-filter: blur(@px);
+  -o-backdrop-filter: blur(@px);
+  -ms-backdrop-filter: blur(@px);
+  backdrop-filter: blur(@px);
+}
+.blur_text(){
+  text-shadow: 0px 0px 12px #ffffff;
+  color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
+}
+.displayFlex(){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.debug{
+  display: none;
+  height: 100vh; 
+  position: fixed;
+  width: 100%;
+  &>div {
+    height: inherit;
+    max-width: 1100px;
+    padding-left: 22px;
+    padding-right: 22px;
+    overflow: hidden;
+    margin: 0 auto;
+    &>div {
+      height: inherit;
+      .displayFlex();
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-left: -11px;
+      margin-right: -11px;
+      &>div {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        margin-left: 11px;
+        margin-right: 11px;
+        width: ~"calc(8.333333333333334% - 22px)";
+        height: inherit;
+        outline: #ff0 solid 1px;
+        background: rgba(0,0,0,.5);
+      }
+    }
+  }
+} 
